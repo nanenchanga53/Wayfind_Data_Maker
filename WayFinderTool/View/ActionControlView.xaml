@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="WayFinderTool.View.ActionControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WayFinderTool.View"
+             mc:Ignorable="d"
+             Height="50">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Background="LightGray" BorderThickness="1.5" BorderBrush="Red" Grid.RowSpan="2"/>
+                <!--<Rectangle Fill="#FFFFCCCC" Stroke="Red" StrokeThickness="2"/>-->
+                <StackPanel Orientation="Horizontal" Margin="1" Grid.Row="0">
+                    <TextBlock Text="Floor" TextAlignment="Center" VerticalAlignment="Center" Width="48"/>
+                    <TextBox x:Name="UI_TextBoxFloor" Text="{Binding FloorString, Mode=TwoWay}" Width="96" Height="20"/>
+                    <TextBlock Text="Map" TextAlignment="Center" VerticalAlignment="Center" Width="48"/>
+                    <TextBox x:Name="UI_TextBoxMap" Text="{Binding MapString, Mode=TwoWay}" Width="96" Height="20"/>
+                    <Button Content="Set" Width="32" Height="20" Margin="8,0,8,0" Command="{Binding ButtonFloorStringSet}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="1" Grid.Row="1">
+                    <TextBlock Text="Status" TextAlignment="Center" VerticalAlignment="Center" Width="48"/>
+                    <TextBlock Text="{Binding ModeString}" TextAlignment="Center" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Border Background="LightGray" BorderThickness="1.5" BorderBrush="Red" />
+                <!--<Rectangle Fill="#FFFFCCCC" Stroke="Red" StrokeThickness="2"/>-->
+
+            </Grid>
+            <Grid>
+                <Border Background="#FFFFCCCC" BorderThickness="1.5" BorderBrush="Red" />
+                <!--<Rectangle Fill="#FFFFCCCC" Stroke="Red" StrokeThickness="2"/>-->
+                <StackPanel Orientation="Horizontal" Margin="2">
+                    <TextBlock Text="Node" TextAlignment="Center" VerticalAlignment="Center" Width="48"/>
+                    <Button Content="Normal" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeNormal}"/>
+                    <Button Content="Kiosk" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeKiosk}"/>
+                    <Button Content="Facility" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeFacility}"/>
+                    <Button Content="Legend" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeLegend}"/>
+                    <Button Content="Elevator" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeElevator}"/>
+                    <Button Content="Escalator" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeEscalator}"/>
+                    <Button Content="Stairs" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeStairs}"/>
+                    <Button Content="Delete" Width="48" Height="48" FontSize="10" Command="{Binding ButtonNodeDelete}"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Border Background="#FFFFCCCC" BorderThickness="1.5" BorderBrush="Red" />
+                <!--<Rectangle Fill="#FFFFCCCC" Stroke="Red" StrokeThickness="2"/>-->
+                <StackPanel Orientation="Horizontal" Margin="2">
+                    <TextBlock Text="Edge" TextAlignment="Center" VerticalAlignment="Center" Width="48"/>
+                    <Button Content="Add" Width="48" Height="48" Command="{Binding ButtonEdgeAdd}"/>
+                    <Button Content="Del" Width="48" Height="48" Command="{Binding ButtonEdgeDel}"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="WayFinderTool.View.NodeInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WayFinderTool.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             Background="LightGray">
+    <Grid>
+        <StackPanel Margin="8">
+            <Grid Height="32" Margin="-8,-8,-8,4">
+                <Border Background="Silver"/>
+                <TextBlock TextAlignment="Center" VerticalAlignment="Center" Text="NodeInfo" FontWeight="Bold"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Parent: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_Parent" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.Parent, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="ID: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_ID" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.ID, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Name: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_Name" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.Name, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Floor: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_Floor" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.Floor, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="X: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_X" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.X, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Y: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_Y" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.Y, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Category: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_Category" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.Category, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="IsUse: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_IsUse" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.IsUse, Mode=TwoWay}"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="MAP ID: " Grid.Column="0"/>
+                <TextBox x:Name="UI_TB_MAPID" Grid.Column="1" Margin="0,2" Text="{Binding NodeInfo.Map, Mode=TwoWay}"/>
+            </Grid>
+            <Button Content="Modify" Margin="0,2" Command="{Binding ButtonModify}"/>
+            <Button Content="Delete" Margin="0,2" Command="{Binding ButtonDelete}"/>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
